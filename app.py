@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = os.getenv('MYSQLHOST', 'localhost')
 app.config['MYSQL_USER'] = os.getenv('MYSQLUSER', 'root')
 app.config['MYSQL_PASSWORD'] = os.getenv('MYSQLPASSWORD', '')
-app.config['MYSQL_DB'] = os.getenv('MYSQLDATABASE', 'crud_flask')
+app.config['MYSQL_DB'] = os.getenv('MYSQLDATABASE', 'railway')
 app.config['MYSQL_PORT'] = int(os.getenv('MYSQLPORT', 3306))
 
 mysql = MySQL(app)
@@ -75,4 +75,5 @@ def delete(id):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+
 
