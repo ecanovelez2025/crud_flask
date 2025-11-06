@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Usuario</title>
+</head>
+<body>
+    <h1>Nuevo Usuario</h1>
+    <form action="{{ url_for('save') }}" method="POST">
+        <label>Nombre:</label>
+        <input type="text" name="name" required><br><br>
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{{ url_for('index') }}">Volver</a>
+</body>
+</html>
